@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stock-backtest-correlation
+  labels:
+    app: stock-backtest-correlation
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stock-backtest-correlation
+  template:
+    metadata:
+      labels:
+        app: stock-backtest-correlation
+    spec:
+      containers:
+      - name: stock-backtest-correlation
+        image: stock-backtest-correlation:latest
+        ports:
+        - containerPort: 8080

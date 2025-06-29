@@ -1,0 +1,13 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: stock-backtest-correlation
+spec:
+  type: ClusterIP
+  selector:
+    app: stock-backtest-correlation
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
