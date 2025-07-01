@@ -16,7 +16,7 @@ spec:
         app: stock-backtest-correlation
     spec:
       containers:
-      - name: stock-backtest-correlation
-        image: stock-backtest-correlation:latest
-        ports:
-        - containerPort: 8080
+        - name: stock-backtest-correlation
+          image: stock-backtest-correlation:latest
+          ports:
+            - containerPort: 8080
