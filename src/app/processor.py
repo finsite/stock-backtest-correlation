@@ -16,11 +16,14 @@ logger = setup_logger(__name__)
 def validate_input_message(message: dict[str, Any]) -> ValidatedMessage:
     """Validate the incoming raw message against the expected schema.
 
-    Parameters:
+    Parameters
+    ----------
         message (dict[str, Any]): The raw message payload.
 
-    Returns:
+    Returns
+    -------
         ValidatedMessage: A validated message object.
+
     """
     logger.debug("🔍 Validating message schema...")
     if not validate_message_schema(message):
@@ -34,11 +37,14 @@ def compute_signal(message: ValidatedMessage) -> dict[str, Any]:
 
     This function is a placeholder. Replace with strategy-specific logic.
 
-    Parameters:
+    Parameters
+    ----------
         message (ValidatedMessage): The validated input data.
 
-    Returns:
+    Returns
+    -------
         dict[str, Any]: The enriched output data.
+
     """
     logger.info("⚙️ Computing backtest signal...")
     signal = {"signal": "HOLD", "confidence": 0.5}  # placeholder logic
